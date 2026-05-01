@@ -1,0 +1,253 @@
+.flashcards-layout {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 24px;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+  
+  .flashcards-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 220px;
+  }
+  
+  .flashcards-list {
+    flex: 2;
+    background: white;
+    border: 3px solid #c04382;
+    border-radius: 16px;
+    padding: 24px;
+    min-height: 300px;
+    text-align: left;
+  }
+  
+  .flashcards-list h3 {
+    color: #c04382;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .flashcards-list-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .flashcard-set-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fdf0fa;
+    border: 2px solid #e8b4d8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+  
+  .flashcard-set-item.selected {
+    background: rgb(240, 179, 228);
+    border-color: #c04382;
+  }
+  
+  .flashcard-set-item input[type="radio"] {
+    accent-color: #c04382;
+  }
+  
+  .flashcard-set-item .set-name {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .flashcard-set-item .set-count {
+    color: #888;
+    font-size: 13px;
+    margin: 2px 0 0;
+  }
+  
+  .fc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .fc-popup {
+    background: white;
+    border: 3px solid #c04382;
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .fc-popup h3 {
+    color: #c04382;
+    margin: 0 0 8px 0;
+  }
+  
+  .fc-popup label {
+    font-weight: bold;
+    color: #c04382;
+    font-size: 14px;
+  }
+  
+  .fc-popup label span {
+    color: #888;
+    font-weight: normal;
+  }
+  
+  .fc-popup input,
+  .fc-popup textarea {
+    padding: 10px 14px;
+    border: 2px solid #e8b4d8;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .fc-popup textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .fc-popup-error {
+    color: #dc3545;
+    font-style: italic;
+  }
+  
+  .fc-popup-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .fc-study-counter {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  
+  .fc-card {
+    width: 100%;
+    max-width: 520px;
+    min-height: 200px;
+    background: white;
+    border: 3px solid #c04382;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    overflow-y: auto;
+  }
+  
+  .fc-word {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .fc-hint {
+    font-size: 13px;
+    color: #bbb;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  
+  .fc-definition {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .fc-study-buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  .fc-btn-dont-know {
+    padding: 14px 32px;
+    background: #f8d7da;
+    border: 3px solid #dc3545;
+    border-radius: 12px;
+    color: #721c24;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .fc-btn-dont-know:hover {
+    background: #f1aeb5;
+  }
+  
+  .fc-btn-know {
+    padding: 14px 32px;
+    background: #d4edda;
+    border: 3px solid #28a745;
+    border-radius: 12px;
+    color: #155724;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .fc-btn-know:hover {
+    background: #a3d9a5;
+  }
+  
+  .fc-done-text {
+    color: #888;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .tool-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .btn-auth:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .fc-loading {
+    color: #c04382;
+  }
+
+  .fc-empty {
+    color: #888;
+    font-style: italic;
+  }
+
+  .flashcards-list {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.flashcards-list-inner {
+  width: 100%;
+}
